@@ -19,7 +19,7 @@
 
 // ===== Scroll animations =====
 (function () {
-    var targets = document.querySelectorAll('.section-title, .missao-content p, .evento-card, .form, .footer-content');
+    var targets = document.querySelectorAll('.section-title, .missao-content p, .valor-card, .evento-card, .form, .footer-content');
     targets.forEach(function (el) {
         el.classList.add('fade-in');
     });
