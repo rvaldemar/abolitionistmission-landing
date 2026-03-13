@@ -11,7 +11,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--white);line-height
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .3s}
 .navbar.scrolled{background:rgba(10,10,10,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
-.nav-brand img{display:block;mix-blend-mode:screen;border-radius:50%}
+.nav-brand img{display:block;border-radius:50%}
 .nav-menu{display:flex;list-style:none;gap:32px;align-items:center}
 .nav-menu a{color:var(--gray);text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color .25s}
 .nav-menu a:hover,.nav-menu a:focus{color:var(--gold)}
@@ -36,7 +36,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--white);line-height
 .hero::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .hero-content{position:relative;z-index:1;padding:24px}
 .hero-logo{display:block;margin:0 auto 40px;cursor:pointer;text-decoration:none}
-.hero-logo img{display:block;margin:0 auto;mix-blend-mode:screen}
+.hero-logo img{display:block;margin:0 auto}
 .hero h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.1;margin-bottom:20px;letter-spacing:-1px}
 .hero-tagline{font-size:clamp(.85rem,1.8vw,1.1rem);color:var(--gold);margin-bottom:44px;font-weight:300;letter-spacing:3px;text-transform:uppercase}
 .hero-scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);opacity:.4}
