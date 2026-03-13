@@ -1,22 +1,3 @@
-// ===== Event visibility based on month =====
-(function () {
-    var month = new Date().getMonth() + 1; // 1-12
-    var primavera = document.getElementById('evento-primavera');
-    var encontro = document.getElementById('evento-encontro');
-    var renovacao = document.getElementById('evento-renovacao');
-
-    if (month >= 1 && month <= 5) {
-        encontro.classList.add('hidden');
-        renovacao.classList.add('hidden');
-    } else if (month >= 6 && month <= 11) {
-        primavera.classList.add('hidden');
-        renovacao.classList.add('hidden');
-    } else {
-        primavera.classList.add('hidden');
-        encontro.classList.add('hidden');
-    }
-})();
-
 // ===== Scroll animations =====
 (function () {
     var targets = document.querySelectorAll('.section-title, .missao-content p, .valor-card, .evento-card, .form, .footer-content');
