@@ -78,6 +78,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
             cidade: formData.get('cidade'),
             pais: formData.get('pais'),
             telefone: formData.get('telefone'),
+            evento: formData.get('evento'),
             como_soube: formData.get('como_soube')
         };
 

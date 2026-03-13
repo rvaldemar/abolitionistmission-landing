@@ -380,6 +380,12 @@ body {
     font-weight: 300;
 }
 
+.evento-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .evento-detalhes {
     display: flex;
     gap: 32px;

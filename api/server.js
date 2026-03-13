@@ -42,8 +42,8 @@ const server = http.createServer(async function (req, res) {
       }
 
       await pool.query(
-        'INSERT INTO inscricoes (nome, email, cidade, pais, telefone, como_soube) VALUES ($1, $2, $3, $4, $5, $6)',
-        [data.nome, data.email, data.cidade, data.pais, data.telefone || null, data.como_soube || null]
+        'INSERT INTO inscricoes (nome, email, cidade, pais, telefone, evento, como_soube) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+        [data.nome, data.email, data.cidade, data.pais, data.telefone || null, data.evento || null, data.como_soube || null]
       );
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
