@@ -66,6 +66,7 @@ body {
 .nav-logo img {
     display: block;
     border-radius: 50%;
+    mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -208,6 +209,7 @@ body {
     background: transparent;
     border: none;
     padding: 0;
+    mix-blend-mode: screen;
     filter: drop-shadow(0 0 60px rgba(212, 168, 67, 0.15));
     transition: filter 0.5s;
 }
