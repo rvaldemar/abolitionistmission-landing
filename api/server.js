@@ -36,14 +36,14 @@ const server = http.createServer(async function (req, res) {
     try {
       var data = await parseBody(req);
 
-      if (!data.nome || !data.email || !data.cidade) {
+      if (!data.nome || !data.email || !data.cidade || !data.pais) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
         return res.end(JSON.stringify({ error: 'Campos obrigatórios em falta' }));
       }
 
       await pool.query(
-        'INSERT INTO inscricoes (nome, email, cidade, telefone, como_soube) VALUES ($1, $2, $3, $4, $5)',
-        [data.nome, data.email, data.cidade, data.telefone || null, data.como_soube || null]
+        'INSERT INTO inscricoes (nome, email, cidade, pais, telefone, como_soube) VALUES ($1, $2, $3, $4, $5, $6)',
+        [data.nome, data.email, data.cidade, data.pais, data.telefone || null, data.como_soube || null]
       );
 
       res.writeHead(200, { 'Content-Type': 'application/json' });

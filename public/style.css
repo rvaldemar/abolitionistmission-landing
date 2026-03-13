@@ -38,6 +38,86 @@ body {
     color: var(--gold);
 }
 
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: background 0.3s, padding 0.3s;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    display: block;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+}
+
+.nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== Buttons ===== */
 .btn {
     display: inline-block;
@@ -125,6 +205,9 @@ body {
 }
 
 .hero-logo img {
+    background: transparent;
+    border: none;
+    padding: 0;
     filter: drop-shadow(0 0 60px rgba(212, 168, 67, 0.15));
     transition: filter 0.5s;
 }
@@ -172,7 +255,7 @@ body {
     margin: 0 auto 56px;
 }
 
-/* ===== Missão / A Marca ===== */
+/* ===== Missão ===== */
 .missao {
     background: var(--dark-surface);
     border-top: 1px solid #1f1f1f;
@@ -240,27 +323,38 @@ body {
 }
 
 /* ===== Eventos ===== */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+}
+
 .evento-card {
     background: var(--dark-card);
     border: 1px solid #1f1f1f;
     padding: 48px;
-    margin-bottom: 16px;
     transition: border-color 0.4s ease;
-    position: relative;
 }
 
 .evento-card:hover {
     border-color: rgba(212, 168, 67, 0.3);
 }
 
-.evento-card.hidden {
-    display: none;
+.evento-card-secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: dashed;
+    border-color: #2a2a2a;
+}
+
+.evento-card-secondary h3 {
+    font-size: 1.3rem;
 }
 
 .evento-badge {
     display: inline-block;
     color: var(--gold);
-    padding: 0;
     font-size: 0.75rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -280,7 +374,6 @@ body {
     line-height: 1.8;
     margin-bottom: 24px;
     font-weight: 300;
-    max-width: 600px;
 }
 
 .evento-detalhes {
@@ -415,27 +508,46 @@ body {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 48px;
 }
 
 .footer-brand h3 {
     font-size: 1.1rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 
-.footer-brand p {
-    color: var(--gold);
-    font-size: 0.75rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.footer-tagline {
+    color: var(--gold) !important;
+    font-size: 0.75rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px;
+}
+
+.footer-reach {
+    color: #666 !important;
+    font-size: 0.8rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    margin-bottom: 4px;
+}
+
+.footer-email {
+    color: #555 !important;
+    font-size: 0.8rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
 }
 
 .footer-social {
     display: flex;
     gap: 20px;
+    padding-top: 4px;
 }
 
 .social-link {
@@ -469,7 +581,6 @@ body {
     transform: translateY(0);
 }
 
-/* Stagger animations for grid items */
 .valor-card.fade-in:nth-child(2) { transition-delay: 0.1s; }
 .valor-card.fade-in:nth-child(3) { transition-delay: 0.2s; }
 
@@ -480,11 +591,15 @@ body {
     }
 
     .hero-logo img {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
     .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-grid {
         grid-template-columns: 1fr;
     }
 
@@ -498,6 +613,10 @@ body {
         gap: 32px;
     }
 
+    .footer-social {
+        justify-content: center;
+    }
+
     .evento-card {
         padding: 32px 24px;
     }
@@ -505,5 +624,28 @@ body {
     .evento-detalhes {
         flex-direction: column;
         gap: 8px;
+    }
+
+    /* Mobile nav */
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(12px);
+        padding: 24px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 }
