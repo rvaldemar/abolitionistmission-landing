@@ -190,10 +190,6 @@ body {
     margin-bottom: 32px;
 }
 
-.logo-svg {
-    opacity: 0.9;
-}
-
 /* ===== Eventos ===== */
 .evento-card {
     background: var(--dark-card);
