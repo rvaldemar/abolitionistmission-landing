@@ -323,10 +323,12 @@ body {
 }
 
 /* ===== Eventos ===== */
-.eventos-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
+.eventos-list {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
 .evento-card {
@@ -596,10 +598,6 @@ body {
     }
 
     .valores-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .eventos-grid {
         grid-template-columns: 1fr;
     }
 
