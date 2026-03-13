@@ -61,10 +61,19 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         btn.disabled = true;
         btn.textContent = 'A enviar...';
 
-        fetch(form.action, {
+        var formData = new FormData(form);
+        var data = {
+            nome: formData.get('nome'),
+            email: formData.get('email'),
+            cidade: formData.get('cidade'),
+            telefone: formData.get('telefone'),
+            como_soube: formData.get('como_soube')
+        };
+
+        fetch('/api/inscricao', {
             method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
+            body: JSON.stringify(data),
+            headers: { 'Content-Type': 'application/json' }
         }).then(function (res) {
             if (res.ok) {
                 form.innerHTML = '<div style="text-align:center;padding:40px 0;"><h3 style="color:var(--gold);margin-bottom:12px;">Obrigado!</h3><p style="color:#ccc;">A sua inscrição foi recebida. Entraremos em contacto em breve.</p></div>';

@@ -1,0 +1,15 @@
+[Unit]
+Description=Abolitionist Mission API
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/var/www/abolisionist_mission/current/api
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
