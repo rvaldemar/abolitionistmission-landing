@@ -55,7 +55,7 @@ form.addEventListener('submit', function (e) {
         headers: { 'Content-Type': 'application/json' }
     }).then(function (r) {
         if (r.ok) {
-            form.innerHTML = '<div style="text-align:center;padding:40px 0"><h3 style="color:var(--gold);margin-bottom:12px;font-size:1.3rem">Inscrição enviada com sucesso!</h3><p style="color:#888;font-weight:300">Bem-vindo ao movimento abolicionista.</p></div>';
+            form.innerHTML = '<div style="text-align:center;padding:40px 0"><h3 style="color:#FAFAFA;margin-bottom:12px;font-size:1.4rem">inscrição enviada com sucesso.</h3><p style="color:#888;font-weight:400;font-size:1.1rem">bem-vindo ao movimento abolicionista.</p></div>';
         } else {
             btn.disabled = false; btn.textContent = orig;
             alert('Erro ao enviar. Tenta novamente.');
