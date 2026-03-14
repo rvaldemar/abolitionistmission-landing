@@ -196,9 +196,9 @@
         .nav-menu.open{display:flex}
     }
     
-    .lang-switcher{position:fixed;bottom:20px;right:20px;z-index:1001}
-    .lang-switcher select{font-family:var(--sans);font-size:.8rem;padding:8px 28px 8px 12px;border:1px solid var(--border);border-radius:4px;background:var(--white);color:var(--text);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%234B5563' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-    .section-dark .lang-switcher select{background:var(--card-dark);color:#fff;border-color:var(--border-dark)}
+    .nav-lang{margin-left:4px}
+    .nav-lang select{font-family:var(--sans);font-size:.78rem;padding:5px 22px 5px 8px;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--text-sec);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 4 4-4' stroke='%234B5563' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center}
+    .nav-lang select:focus{outline:none;border-color:var(--accent)}
     </style>
 </head>
 <body>
@@ -218,6 +218,7 @@
                 <li><a href="#missao">misión</a></li>
                 <li><a href="#eventos">eventos</a></li>
                 <li><a href="#formulario">únete</a></li>
+                <li class="nav-lang"><select onchange="document.cookie='lang_chosen=1;path=/;max-age=31536000';window.location.href=this.value" aria-label="Língua"><option value="/">PT</option><option value="/en/">EN</option><option value="/es/" selected>ES</option><option value="/fr/">FR</option><option value="/de/">DE</option><option value="/it/">IT</option><option value="/nl/">NL</option><option value="/pl/">PL</option><option value="/bg/">BG</option><option value="/hr/">HR</option><option value="/cs/">CS</option><option value="/da/">DA</option><option value="/et/">ET</option><option value="/fi/">FI</option><option value="/el/">EL</option><option value="/hu/">HU</option><option value="/ga/">GA</option><option value="/lv/">LV</option><option value="/lt/">LT</option><option value="/mt/">MT</option><option value="/ro/">RO</option><option value="/sk/">SK</option><option value="/sl/">SL</option><option value="/sv/">SV</option></select></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
@@ -354,8 +355,8 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="telefone">teléfono</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(opcional)">
+                    <label for="telefone">teléfono *</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="+34 612 345 678">
                 </div>
                 <div class="field">
                     <label for="evento">quiero participar en: *</label>
@@ -379,6 +380,10 @@
                         <option value="Outro">Outro</option>
                     </select>
                 </div>
+                <label class="check">
+                    <input type="checkbox" name="contacto" required>
+                    <span>reconozco que podré ser contactado para fines de organización de eventos *</span>
+                </label>
                 <label class="check">
                     <input type="checkbox" name="termos" required>
                     <span>acepto los términos de uso y la política de privacidad *</span>
@@ -481,7 +486,20 @@
             alert('Erro ao enviar. Tenta novamente.');
         });
     });
+    // Auto-detect language from browser
+    (function(){
+        if (document.cookie.indexOf('lang_chosen=1') !== -1) return;
+        var supported = ['en','es','fr','de','it','nl','pl','bg','hr','cs','da','et','fi','el','hu','ga','lv','lt','mt','ro','sk','sl','sv'];
+        var langs = (navigator.language || navigator.userLanguage || 'pt').toLowerCase().split(',');
+        for (var i = 0; i < langs.length; i++) {
+            var code = langs[i].trim().split('-')[0];
+            if (code === 'pt') break;
+            if (supported.indexOf(code) !== -1) {
+                window.location.href = '/' + code + '/';
+                return;
+            }
+        }
+    })();
     </script>
-<div class="lang-switcher"><select onchange="window.location.href=this.value" aria-label="Language"><option value="/">Português</option><option value="/en/">English</option><option value="/es/" selected>Español</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/bg/">Български</option><option value="/hr/">Hrvatski</option><option value="/cs/">Čeština</option><option value="/da/">Dansk</option><option value="/et/">Eesti</option><option value="/fi/">Suomi</option><option value="/el/">Ελληνικά</option><option value="/hu/">Magyar</option><option value="/ga/">Gaeilge</option><option value="/lv/">Latviešu</option><option value="/lt/">Lietuvių</option><option value="/mt/">Malti</option><option value="/ro/">Română</option><option value="/sk/">Slovenčina</option><option value="/sl/">Slovenščina</option><option value="/sv/">Svenska</option></select></div>
 </body>
 </html>

@@ -196,9 +196,9 @@
         .nav-menu.open{display:flex}
     }
     
-    .lang-switcher{position:fixed;bottom:20px;right:20px;z-index:1001}
-    .lang-switcher select{font-family:var(--sans);font-size:.8rem;padding:8px 28px 8px 12px;border:1px solid var(--border);border-radius:4px;background:var(--white);color:var(--text);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%234B5563' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-    .section-dark .lang-switcher select{background:var(--card-dark);color:#fff;border-color:var(--border-dark)}
+    .nav-lang{margin-left:4px}
+    .nav-lang select{font-family:var(--sans);font-size:.78rem;padding:5px 22px 5px 8px;border:1px solid var(--border);border-radius:3px;background:transparent;color:var(--text-sec);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 4 4-4' stroke='%234B5563' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center}
+    .nav-lang select:focus{outline:none;border-color:var(--accent)}
     </style>
 </head>
 <body>
@@ -216,8 +216,9 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#missao">misean</a></li>
-                <li><a href="#eventos">teacht</a></li>
+                <li><a href="#eventos">imeachtaí</a></li>
                 <li><a href="#formulario">bí linn</a></li>
+                <li class="nav-lang"><select onchange="document.cookie='lang_chosen=1;path=/;max-age=31536000';window.location.href=this.value" aria-label="Língua"><option value="/">PT</option><option value="/en/">EN</option><option value="/es/">ES</option><option value="/fr/">FR</option><option value="/de/">DE</option><option value="/it/">IT</option><option value="/nl/">NL</option><option value="/pl/">PL</option><option value="/bg/">BG</option><option value="/hr/">HR</option><option value="/cs/">CS</option><option value="/da/">DA</option><option value="/et/">ET</option><option value="/fi/">FI</option><option value="/el/">EL</option><option value="/hu/">HU</option><option value="/ga/" selected>GA</option><option value="/lv/">LV</option><option value="/lt/">LT</option><option value="/mt/">MT</option><option value="/ro/">RO</option><option value="/sk/">SK</option><option value="/sl/">SL</option><option value="/sv/">SV</option></select></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
@@ -248,24 +249,24 @@
             <h2 class="section-title">ár misean</h2>
             <div class="divider"></div>
             <div class="prose">
-                <p>Abolitionist Mission is an abolitionist movement rooted in Portugal that operates across Europe and the Lusophone world. Our purpose is clear and non-negotiable: to end the sacrifice of children. Just as the abolitionists of the past did not rest until they eradicated slavery, we will not rest until no innocent child is sacrificed. Every person, from conception to natural death, possesses an inviolable dignity — and we exist to defend it.</p>
-                <p>We are heirs of the abolitionists who changed the world. We work to build a culture of life where no life is disposable. From Lisbon to Luanda, from Porto to Maputo, from Coimbra to Dili — we educate, raise awareness, and mobilize. Because silence in the face of the sacrifice of the innocent is not neutrality — it is complicity.</p>
+                <p>Is gluaiseacht díothaithe í Abolitionist Mission a bhfuil a fréamhacha sa Phortaingéil agus a oibríonn ar fud na hEorpa agus an domhain Lúsafónaigh. Tá ár gcuspóir soiléir agus neamh-idirbheartaíochta: deireadh a chur le híobairt leanaí. Díreach mar nár stop díothóirí an ama atá caite go dtí gur dhíothaigh siad an sclábhaíocht, ní stopfaimid go dtí nach ndéanfar aon leanbh neamhchiontach a íobairt. Tá dínit dosháraithe ag gach duine, ón nginíúint go dtí an bás nádúrtha — agus is ann dúinn chun í a chosaint.</p>
+                <p>Is oidhrí muid ar na díothóirí a d'athraigh an domhan. Oibrímid chun cultúr na beatha a thógáil ina nach bhfuil aon bheatha indiúscartha. Ó Liospóin go Luanda, ó Porto go Maputo, ó Coimbra go Dili — oideachasaimid, ardaímid feasacht agus slógaimid. Óir ní neodracht é an tost os comhair íobairt na ndaoine neamhchiontacha — is comhpháirtíocht í.</p>
             </div>
             <div class="pillars">
                 <div class="pillar">
                     <div class="pillar-bar"></div>
-                    <h3>mission</h3>
-                    <p>To end the sacrifice of children. To defend every human life from conception. From Portugal to Europe and the entire Lusophone world — no exceptions, no compromises.</p>
+                    <h3>misean</h3>
+                    <p>Deireadh a chur le híobairt leanaí. Gach beatha dhaonna a chosaint ón nginíúint. Ón bPortaingéil go dtí an Eoraip agus an Lúsafóin ar fad — gan eisceachtaí, gan comhréitigh.</p>
                 </div>
                 <div class="pillar">
                     <div class="pillar-bar"></div>
-                    <h3>vision</h3>
-                    <p>A world where no innocent child is sacrificed. Where every life is protected from conception to natural death. That world is possible — and we will build it.</p>
+                    <h3>fís</h3>
+                    <p>Domhan ina nach ndéantar aon leanbh neamhchiontach a íobairt. Áit a gcosnaítear gach beatha ón nginíúint go dtí an bás nádúrtha. Tá an domhan sin indéanta — agus tógfaimid é.</p>
                 </div>
                 <div class="pillar">
                     <div class="pillar-bar"></div>
-                    <h3>values</h3>
-                    <p>Life. Truth. Dignity. Courage. Compassion. Solidarity.</p>
+                    <h3>luachanna</h3>
+                    <p>Beatha. Fírinne. Dínit. Misneach. Trua. Dlúthpháirtíocht.</p>
                 </div>
             </div>
         </div>
@@ -279,36 +280,36 @@
 
             <div class="events">
                 <article class="event-card">
-                    <span class="event-label event-label-accent">confirmed participation</span>
-                    <h3>Walk for Life 2026</h3>
-                    <p>The Walk for Life is the largest pro-life event in Portugal, organized by the Portuguese Federation for Life since 1998. This year, it takes place simultaneously in 12 cities. Abolitionist Mission will be present in Lisbon — we want to gather abolitionists and march together from Largo de Camões to the Parliament. Come represent the movement with us.</p>
+                    <span class="event-label event-label-accent">rannpháirtíocht deimhnithe</span>
+                    <h3>Máirseáil ar son na Beatha 2026</h3>
+                    <p>Is é Máirseáil ar son na Beatha an t-imeacht pro-life is mó sa Phortaingéil, eagraithe ag Cónaidhm na Portaingéile ar son na Beatha ó 1998. I mbliana, tarlaíonn sé go comhuaineach i 12 chathair. Beidh Abolitionist Mission i láthair i Liospóin — ba mhaith linn díothóirí a bhailiú agus máirseáil le chéile ó Largo de Camões go dtí an Parlaimint.</p>
                     <div class="event-meta">
-                        <span>March 21 &middot; 3:00 PM</span>
-                        <span>Largo de Camões &rarr; Parliament, Lisbon</span>
+                        <span>21 Márta &middot; 3:00 i.n.</span>
+                        <span>Largo de Camões &rarr; Parlaimint, Liospóin</span>
                     </div>
                     <div class="event-actions">
-                        <a href="#formulario" class="btn btn-accent">march with us</a>
-                        <a href="https://www.federacaopelavida.pt" target="_blank" rel="noopener" class="btn btn-outline-light">learn more</a>
+                        <a href="#formulario" class="btn btn-accent">máirseáil linn</a>
+                        <a href="https://www.federacaopelavida.pt" target="_blank" rel="noopener" class="btn btn-outline-light">foghlaim tuilleadh</a>
                     </div>
                 </article>
 
                 <article class="event-card">
-                    <span class="event-label event-label-accent">gathering</span>
-                    <h3>Abolitionist Dinner</h3>
-                    <p>After the Walk, we will gather abolitionists at the table. Get to know each other, strengthen bonds, and plan the next steps. Sign up to save your seat.</p>
+                    <span class="event-label event-label-accent">cruinniú</span>
+                    <h3>Dinnéar Díothaithe</h3>
+                    <p>Tar éis na Máirseála, baileoimid na díothóirí ag an mbord. Aithne a chur ar a chéile, naisc a neartú agus na chéad chéimeanna eile a phleanáil. Cláraigh chun do shuíochán a chur in áirithe.</p>
                     <div class="event-meta">
-                        <span>March 21 &middot; after the walk</span>
+                        <span>21 Márta &middot; tar éis na máirseála</span>
                     </div>
                     <div class="event-actions">
-                        <a href="#formulario" class="btn btn-outline-light">save your seat</a>
+                        <a href="#formulario" class="btn btn-outline-light">cuir do shuíochán in áirithe</a>
                     </div>
                 </article>
 
                 <article class="event-card event-card--muted">
-                    <h3>More events soon</h3>
-                    <p>We are preparing actions across Europe and the Lusophone world. Sign up to be the first to know.</p>
+                    <h3>Tuilleadh imeachtaí go luath</h3>
+                    <p>Táimid ag ullmhú gníomhartha ar fud na hEorpa agus na Lúsafóine. Cláraigh chun bheith ar an gcéad duine a fhaigheann amach.</p>
                     <div class="event-actions">
-                        <a href="#formulario" class="btn btn-outline-light">stay informed</a>
+                        <a href="#formulario" class="btn btn-outline-light">fan ar an eolas</a>
                     </div>
                 </article>
             </div>
@@ -320,26 +321,26 @@
         <div class="container">
             <h2 class="section-title">bí linn</h2>
             <div class="divider"></div>
-            <p class="form-lead">fill out the form and be part of the abolitionist movement.</p>
+            <p class="form-lead">líon an fhoirm agus bí mar chuid den ghluaiseacht díothaithe.</p>
 
             <form class="form" id="form">
                 <div class="field">
-                    <label for="nome">full name *</label>
-                    <input type="text" id="nome" name="nome" required placeholder="your name">
+                    <label for="nome">ainm iomlán *</label>
+                    <input type="text" id="nome" name="nome" required placeholder="d'ainm">
                 </div>
                 <div class="field">
-                    <label for="email">email *</label>
+                    <label for="email">ríomhphost *</label>
                     <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
                 </div>
                 <div class="field-row">
                     <div class="field">
-                        <label for="cidade">city *</label>
-                        <input type="text" id="cidade" name="cidade" required placeholder="your city">
+                        <label for="cidade">cathair *</label>
+                        <input type="text" id="cidade" name="cidade" required placeholder="do chathair">
                     </div>
                     <div class="field">
-                        <label for="pais">country *</label>
+                        <label for="pais">tír *</label>
                         <select id="pais" name="pais" required>
-                            <option value="">select...</option>
+                            <option value="">roghnaigh...</option>
                             <option value="Portugal">Portugal</option>
                             <option value="Brasil">Brasil</option>
                             <option value="Angola">Angola</option>
@@ -354,13 +355,13 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="telefone">phone</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(optional)">
+                    <label for="telefone">teileafón</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(roghnach)">
                 </div>
                 <div class="field">
-                    <label for="evento">i want to participate in: *</label>
+                    <label for="evento">ba mhaith liom páirt a ghlacadh i: *</label>
                     <select id="evento" name="evento" required>
-                        <option value="" disabled selected>select...</option>
+                        <option value="" disabled selected>roghnaigh...</option>
                         <option value="Caminhada pela Vida — 21 março">Caminhada pela Vida — 21 março</option>
                         <option value="Jantar Abolicionista — 21 março">Jantar Abolicionista — 21 março</option>
                         <option value="Ambos (Caminhada + Jantar)">Ambos (Caminhada + Jantar)</option>
@@ -368,9 +369,9 @@
                     </select>
                 </div>
                 <div class="field">
-                    <label for="como_soube">how did you hear about us?</label>
+                    <label for="como_soube">conas a chuala tú fúinn?</label>
                     <select id="como_soube" name="como_soube">
-                        <option value="">select...</option>
+                        <option value="">roghnaigh...</option>
                         <option value="Redes Sociais">Redes Sociais</option>
                         <option value="Amigo ou Familiar">Amigo ou Familiar</option>
                         <option value="Igreja / Paróquia">Igreja / Paróquia</option>
@@ -380,8 +381,12 @@
                     </select>
                 </div>
                 <label class="check">
+                    <input type="checkbox" name="contacto" required>
+                    <span>i acknowledge that i may be contacted for event organization purposes *</span>
+                </label>
+                <label class="check">
                     <input type="checkbox" name="termos" required>
-                    <span>i accept the terms of use and the privacy policy *</span>
+                    <span>glacaim leis na téarmaí úsáide agus an polasaí príobháideachais *</span>
                 </label>
                 <button type="submit" class="btn btn-accent btn-block">seol clárú</button>
             </form>
@@ -396,7 +401,7 @@
                 <div class="footer-info">
                     <p class="footer-brand"><span>abolitionist</span> <strong>mission</strong></p>
                     <p class="footer-tagline">pela vida. pela dignidade. pelo futuro.</p>
-                    <p class="footer-sub">from Portugal to Europe and the Lusophone world</p>
+                    <p class="footer-sub">ón bPortaingéil go dtí an Eoraip agus an Lúsafóin</p>
                     <p class="footer-sub">info@abolitionistmission.com</p>
                 </div>
                 <div class="footer-social">
@@ -408,7 +413,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 abolitionist mission. all rights reserved.</p>
+                <p>&copy; 2026 abolitionist mission. gach ceart ar cosaint.</p>
             </div>
         </div>
     </footer>
@@ -459,7 +464,7 @@
         var btn = form.querySelector('button');
         var orig = btn.textContent;
         btn.disabled = true;
-        btn.textContent = 'sending...';
+        btn.textContent = 'á sheoladh...';
 
         var fd = new FormData(form);
         var data = {};
@@ -471,17 +476,30 @@
             headers: { 'Content-Type': 'application/json' }
         }).then(function (r) {
             if (r.ok) {
-                form.innerHTML = '<div style="text-align:center;padding:48px 0"><h3 style="font-family:Playfair Display,serif;color:#1A1A1A;margin-bottom:12px;font-size:1.6rem;font-weight:700;font-style:normal">registration submitted successfully.</h3><p style="color:#4B5563;font-size:.95rem">welcome to the abolitionist movement.</p></div>';
+                form.innerHTML = '<div style="text-align:center;padding:48px 0"><h3 style="font-family:Playfair Display,serif;color:#1A1A1A;margin-bottom:12px;font-size:1.6rem;font-weight:700;font-style:normal">clárú seolta go rathúil.</h3><p style="color:#4B5563;font-size:.95rem">fáilte go dtí an ghluaiseacht díothaithe.</p></div>';
             } else {
                 btn.disabled = false; btn.textContent = orig;
-                alert('Error submitting. Please try again.');
+                alert('Earráid le linn seolta. Bain triail as arís le do thoil.');
             }
         }).catch(function () {
             btn.disabled = false; btn.textContent = orig;
             alert('Erro ao enviar. Tenta novamente.');
         });
     });
+    // Auto-detect language from browser
+    (function(){
+        if (document.cookie.indexOf('lang_chosen=1') !== -1) return;
+        var supported = ['en','es','fr','de','it','nl','pl','bg','hr','cs','da','et','fi','el','hu','ga','lv','lt','mt','ro','sk','sl','sv'];
+        var langs = (navigator.language || navigator.userLanguage || 'pt').toLowerCase().split(',');
+        for (var i = 0; i < langs.length; i++) {
+            var code = langs[i].trim().split('-')[0];
+            if (code === 'pt') break;
+            if (supported.indexOf(code) !== -1) {
+                window.location.href = '/' + code + '/';
+                return;
+            }
+        }
+    })();
     </script>
-<div class="lang-switcher"><select onchange="window.location.href=this.value" aria-label="Language"><option value="/">Português</option><option value="/en/">English</option><option value="/es/">Español</option><option value="/fr/">Français</option><option value="/de/">Deutsch</option><option value="/it/">Italiano</option><option value="/nl/">Nederlands</option><option value="/pl/">Polski</option><option value="/bg/">Български</option><option value="/hr/">Hrvatski</option><option value="/cs/">Čeština</option><option value="/da/">Dansk</option><option value="/et/">Eesti</option><option value="/fi/">Suomi</option><option value="/el/">Ελληνικά</option><option value="/hu/">Magyar</option><option value="/ga/" selected>Gaeilge</option><option value="/lv/">Latviešu</option><option value="/lt/">Lietuvių</option><option value="/mt/">Malti</option><option value="/ro/">Română</option><option value="/sk/">Slovenčina</option><option value="/sl/">Slovenščina</option><option value="/sv/">Svenska</option></select></div>
 </body>
 </html>
