@@ -785,3 +785,41 @@
   INFO [2cc24c99] Finished in 0.350 seconds with exit status 0 (successful).
   INFO [5b1eb46d] Running /usr/bin/env echo "Branch main (at 118d69f7de85bd4e96791c64f963dfae9f29c562) deployed as release 20260314004704 by ruisantos" >> /var/www/abolisionist_mission/revisions.log as deploy@77.42.82.10
   INFO [5b1eb46d] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2026-03-14 14:07:00 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [dac95637] Running /usr/bin/env mkdir -p /tmp as deploy@77.42.82.10
+  INFO [dac95637] Finished in 1.463 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-3b029c81e240b8d5004b.sh 100.0%
+  INFO [860b937a] Running /usr/bin/env chmod 700 /tmp/git-ssh-3b029c81e240b8d5004b.sh as deploy@77.42.82.10
+  INFO [860b937a] Finished in 0.441 seconds with exit status 0 (successful).
+  INFO [000f1c14] Running /usr/bin/env git ls-remote git@github.com:rvaldemar/abolitionistmission-landing.git HEAD as deploy@77.42.82.10
+  INFO [000f1c14] Finished in 2.190 seconds with exit status 0 (successful).
+  INFO [8335039b] Running /usr/bin/env mkdir -p /var/www/abolisionist_mission/shared /var/www/abolisionist_mission/releases as deploy@77.42.82.10
+  INFO [8335039b] Finished in 0.431 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/abolisionist_mission/repo
+  INFO [42ae9e64] Running /usr/bin/env git remote set-url origin git@github.com:rvaldemar/abolitionistmission-landing.git as deploy@77.42.82.10
+  INFO [42ae9e64] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [127230a0] Running /usr/bin/env git remote update --prune as deploy@77.42.82.10
+  INFO [127230a0] Finished in 2.705 seconds with exit status 0 (successful).
+  INFO [26916af9] Running /usr/bin/env mkdir -p /var/www/abolisionist_mission/releases/20260314140707 as deploy@77.42.82.10
+  INFO [26916af9] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [4ca8e869] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /var/www/abolisionist_mission/releases/20260314140707 as deploy@77.42.82.10
+  INFO [4ca8e869] Finished in 0.461 seconds with exit status 0 (successful).
+  INFO [a4a3d94d] Running /usr/bin/env echo "b20a860efb8a97907805526bc9ba81b2eaecb824" > REVISION as deploy@77.42.82.10
+  INFO [a4a3d94d] Finished in 0.454 seconds with exit status 0 (successful).
+  INFO [d61b91ce] Running /usr/bin/env echo "1773497217" > REVISION_TIME as deploy@77.42.82.10
+  INFO [d61b91ce] Finished in 0.421 seconds with exit status 0 (successful).
+  INFO [b43ad8b9] Running /usr/bin/env ln -s /var/www/abolisionist_mission/releases/20260314140707 /var/www/abolisionist_mission/releases/current as deploy@77.42.82.10
+  INFO [b43ad8b9] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [b9147f66] Running /usr/bin/env mv /var/www/abolisionist_mission/releases/current /var/www/abolisionist_mission as deploy@77.42.82.10
+  INFO [b9147f66] Finished in 0.366 seconds with exit status 0 (successful).
+  INFO [78f03ddb] Running /usr/bin/env npm install --production as deploy@77.42.82.10
+  INFO [78f03ddb] Finished in 2.271 seconds with exit status 0 (successful).
+  INFO [2aead7da] Running /usr/bin/env sudo systemctl restart abolisionist_mission_api as deploy@77.42.82.10
+  INFO [2aead7da] Finished in 0.388 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 77.42.82.10
+  INFO [f1ca49f2] Running /usr/bin/env rm -rf /var/www/abolisionist_mission/releases/20260314001825 as deploy@77.42.82.10
+  INFO [f1ca49f2] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [f4c1eae9] Running /usr/bin/env echo "Branch main (at b20a860efb8a97907805526bc9ba81b2eaecb824) deployed as release 20260314140707 by ruisantos" >> /var/www/abolisionist_mission/revisions.log as deploy@77.42.82.10
+  INFO [f4c1eae9] Finished in 0.398 seconds with exit status 0 (successful).

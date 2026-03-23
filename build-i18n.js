@@ -1403,18 +1403,6 @@ function generateHtml(t) {
 
   // Events
   html = html.replace('>próximos eventos</h2>', `>${t.eventosTitle}</h2>`);
-  html = html.replace('>participação confirmada</span>', `>${t.eventBadge1}</span>`);
-  html = html.replace('>Caminhada pela Vida 2026</h3>', `>${t.eventTitle1}</h3>`);
-  html = html.replace(/A Caminhada pela Vida é o maior evento.*?connosco\./, t.eventDesc1);
-  html = html.replace('21 de março &middot; 15h00', t.eventDate1);
-  html = html.replace('Largo de Camões &rarr; Assembleia da República, Lisboa', t.eventLocal1);
-  html = html.replace('>marcha connosco</a>', `>${t.eventBtn1}</a>`);
-  html = html.replace('>saber mais</a>', `>${t.eventBtn1b}</a>`);
-  html = html.replace('>convívio</span>', `>${t.eventBadge2}</span>`);
-  html = html.replace('>Jantar Abolicionista</h3>', `>${t.eventTitle2}</h3>`);
-  html = html.replace(/Depois da Caminhada.*?lugar\./, t.eventDesc2);
-  html = html.replace('21 de março &middot; após a caminhada', t.eventDate2);
-  html = html.replace('>reserva o teu lugar</a>', `>${t.eventBtn2}</a>`);
   html = html.replace('>Mais eventos em breve</h3>', `>${t.eventTitle3}</h3>`);
   html = html.replace(/Estamos a preparar.*?saber\./, t.eventDesc3);
   html = html.replace('>fica a par</a>', `>${t.eventBtn3}</a>`);
@@ -1431,7 +1419,6 @@ function generateHtml(t) {
   html = html.replace(/>selecione\.\.\.<\/option>/g, `>${t.selecione}</option>`);
   html = html.replace('>telemóvel *</label>', `>${t.labelTelefone}</label>`);
   html = html.replace('placeholder="+351 912 345 678"', `placeholder="${t.phTelefone}"`);
-  html = html.replace('>quero participar na: *</label>', `>${t.labelEvento}</label>`);
   html = html.replace('>como soube de nós?</label>', `>${t.labelComoSoube}</label>`);
   html = html.replace('reconheço que poderei ser contactado para fins de organização dos eventos *', t.checkContacto || 'i acknowledge that i may be contacted for event organization purposes *');
   html = html.replace('aceito os termos de utilização e a política de privacidade *', t.checkTermos);

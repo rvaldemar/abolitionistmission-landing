@@ -16,35 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "Caminhada pela Vida 2026",
-        "description": "Marcha anual em defesa da vida humana desde a conceção até à morte natural.",
-        "startDate": "2026-03-21T15:00:00+00:00",
-        "endDate": "2026-03-21T18:00:00+00:00",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": { "@type": "Place", "name": "Largo de Camões", "address": { "@type": "PostalAddress", "streetAddress": "Largo de Camões", "addressLocality": "Lisboa", "addressCountry": "PT" } },
-        "organizer": { "@type": "Organization", "name": "Federação Portuguesa pela Vida", "url": "https://www.federacaopelavida.pt" },
-        "performer": { "@type": "Organization", "name": "Abolitionist Mission", "url": "https://abolitionistmission.com" }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FoodEvent",
-        "name": "Jantar Abolicionista",
-        "description": "Jantar de convívio dos abolicionistas após a Caminhada pela Vida.",
-        "startDate": "2026-03-21T20:00:00+00:00",
-        "endDate": "2026-03-21T23:00:00+00:00",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": { "@type": "Place", "name": "Lisboa (local a confirmar)", "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" } },
-        "organizer": { "@type": "Organization", "name": "Abolitionist Mission", "url": "https://abolitionistmission.com" }
-      }
-    ]
-    </script>
+
     <style>
     /* === Reset & Variables === */
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -279,32 +251,6 @@
             <div class="divider"></div>
 
             <div class="events">
-                <article class="event-card">
-                    <span class="event-label event-label-accent">partecipazione confermata</span>
-                    <h3>Marcia per la Vita 2026</h3>
-                    <p>La Marcia per la Vita è il più grande evento pro-vita in Portogallo, organizzato dalla Federazione Portoghese per la Vita dal 1998. Quest'anno si svolge simultaneamente in 12 città. Abolitionist Mission sarà presente a Lisbona — vogliamo riunire gli abolizionisti e marciare insieme da Largo de Camões al Parlamento.</p>
-                    <div class="event-meta">
-                        <span>21 marzo &middot; 15:00</span>
-                        <span>Largo de Camões &rarr; Parlamento, Lisbona</span>
-                    </div>
-                    <div class="event-actions">
-                        <a href="#formulario" class="btn btn-accent">marcia con noi</a>
-                        <a href="https://www.federacaopelavida.pt" target="_blank" rel="noopener" class="btn btn-outline-light">scopri di più</a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <span class="event-label event-label-accent">convivialità</span>
-                    <h3>Cena Abolizionista</h3>
-                    <p>Dopo la Marcia, riuniremo gli abolizionisti a tavola. Conoscerci, rafforzare i legami e pianificare i prossimi passi. Iscriviti per riservare il tuo posto.</p>
-                    <div class="event-meta">
-                        <span>21 marzo &middot; dopo la marcia</span>
-                    </div>
-                    <div class="event-actions">
-                        <a href="#formulario" class="btn btn-outline-light">riserva il tuo posto</a>
-                    </div>
-                </article>
-
                 <article class="event-card event-card--muted">
                     <h3>Altri eventi in arrivo</h3>
                     <p>Stiamo preparando azioni in Europa e nella Lusofonia. Iscriviti per essere il primo a saperlo.</p>
@@ -358,16 +304,7 @@
                     <label for="telefone">telefono *</label>
                     <input type="tel" id="telefone" name="telefone" required placeholder="+39 320 1234567">
                 </div>
-                <div class="field">
-                    <label for="evento">voglio partecipare a: *</label>
-                    <select id="evento" name="evento" required>
-                        <option value="" disabled selected>seleziona...</option>
-                        <option value="Caminhada pela Vida — 21 março">Caminhada pela Vida — 21 março</option>
-                        <option value="Jantar Abolicionista — 21 março">Jantar Abolicionista — 21 março</option>
-                        <option value="Ambos (Caminhada + Jantar)">Ambos (Caminhada + Jantar)</option>
-                        <option value="Nenhum por agora — só quero juntar-me ao movimento">Nenhum por agora — só quero juntar-me ao movimento</option>
-                    </select>
-                </div>
+
                 <div class="field">
                     <label for="como_soube">come hai saputo di noi?</label>
                     <select id="como_soube" name="como_soube">
